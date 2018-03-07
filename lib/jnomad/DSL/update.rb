@@ -18,6 +18,10 @@ module Jnomad
       def stagger(stagger)
         @stagger = stagger * 1000000000
       end
+     
+      def canary(canary)
+        @canary = canary
+      end
 
     end
   end
