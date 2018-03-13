@@ -9,7 +9,7 @@ module Jnomad
         @args = []
         @header = {}
         @method = nil
-        @path - nil
+        @path = nil
         @protocol = nil
         @t_l_s_skip_verify = nil
         @port_label = nil
