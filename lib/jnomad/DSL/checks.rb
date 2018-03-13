@@ -52,8 +52,8 @@ module Jnomad
         @protocol = protocol
       end
 
-      def t_l_s_skip_verify(t_l_s_skip_verify)
-        @t_l_s_skip_verify = t_l_s_skip_verify
+      def tls(tls)
+        @t_l_s_skip_verify = tls
       end
 
       def port_label(port_label)
