@@ -7,7 +7,7 @@ module Jnomad
         @min_healthy_time = nil
         @healthy_deadline = nil
         @auto_revert = true
-        @canary = nil
+        @canary = 1
         @stagger = nil
       end
 
@@ -17,6 +17,10 @@ module Jnomad
 
       def stagger(stagger)
         @stagger = stagger * 1000000000
+      end
+ 
+      def canary(canary)
+        @canary = canary
       end
 
     end
