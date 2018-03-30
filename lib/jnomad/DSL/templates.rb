@@ -6,6 +6,7 @@ module Jnomad
         @dest_path = nil
         @change_mode = nil
         @change_signal = nil
+        @embedded_tmpl = nil
       end
 
       def source_path(source_path)
@@ -22,6 +23,10 @@ module Jnomad
 
       def change_signal(change_signal)
         @change_signal = change_signal
+      end
+      
+      def embedded_tmpl(embedded_tmpl)
+        @embedded_tmpl = embedded_tmpl
       end
 
     end
