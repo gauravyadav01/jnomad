@@ -15,12 +15,24 @@ module Jnomad
         @max_parallel = max_parallel
       end
 
-      def stagger(stagger)
-        @stagger = stagger * 1000000000
+      def health_check(health_check)
+        @health_check = health_check
       end
-     
+
+      def min_healthy_time(min_healthy_time)
+         @min_healthy_time = min_healthy_time 
+      end
+
+      def healthy_deadline(healthy_deadline)
+        @healthy_deadline = healthy_deadline
+      end
+
       def canary(canary)
         @canary = canary
+      end
+
+      def stagger(stagger)
+        @stagger = stagger * 1000000000
       end
 
     end

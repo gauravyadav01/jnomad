@@ -53,6 +53,18 @@ module Jnomad
       return get(path)
     end
 
+    #POST /v1/deployment/promote/<ID>
+    def promote_deployment(id)
+      path = File.join("/deployment", "/promote", id)
+      return get(path)
+    end
+
+    #POST /v1/deployment/fail/<ID>
+    def fail_deployment(id)
+      path = File.join("/deployment", "/fail", id)
+      return get(path)
+    end
+
     #PUT/POST /v1/job
     def force_job_evaluation(id)
       path = File.join("/job", id, "/evaluate")

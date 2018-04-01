@@ -14,6 +14,7 @@ module Jnomad
         @t_l_s_skip_verify = nil
         @port_label = nil
         @inteval = nil
+        @check_restart = nil
       end
 
       def id(id)
@@ -36,8 +37,8 @@ module Jnomad
         @args = args
       end
 
-      def header(header)
-        @header = header
+      def header(key, value)
+        @header[key] = value
       end
 
       def method(method)
@@ -61,12 +62,17 @@ module Jnomad
       end
 
       def interval(interval)
-        @interval = interval
+        @interval = interval * 1000000000
       end
 
       def timeout(timeout)
-        @timeout = timeout
+        @timeout = timeout * 1000000000
       end
+      
+      def check_restart(key, value)
+        @check_restart[key] = value
+      end
+ 
     end
   end
 end

@@ -8,6 +8,7 @@ module Jnomad
         @name = nil
         @restart_policy = nil
         @tasks = []
+        @ephemeral_disk = {}
       end
 
       def task(&block)
@@ -45,6 +46,11 @@ module Jnomad
       def count(count)
         @count = count
       end
+      
+      def ephemeral_dsik(key, value)
+        @ephemeral_disk[key] = value
+      end
+
     end
   end
 end
