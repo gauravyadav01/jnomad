@@ -21,11 +21,11 @@ module Jnomad
         @tags = tags
       end
 
-      def port_label(port_label)
+      def port(port)
         @port_label = port_label
       end
 
-      def checks(&block)
+      def check(&block)
         c = Checks.new
 
         c.instance_eval &block
