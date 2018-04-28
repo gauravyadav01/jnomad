@@ -57,7 +57,7 @@ module Jnomad
         @constraints << c
       end
 
-      def log_config(&block)
+      def logs(&block)
         lc = LogConfig.new
 
         lc.instance_eval &block

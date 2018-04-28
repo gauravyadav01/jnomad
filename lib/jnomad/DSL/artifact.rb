@@ -5,18 +5,23 @@ module Jnomad
         @getter_source = nil
         @relative_dest = nil
         @getter_options = {}
+        @mode = nil
       end
 
       def source(source)
         @getter_source = source
       end
 
-      def relative_dest(relative_dest)
-        @relative_dest = relative_dest
+      def destination(destination)
+        @relative_dest = destination
       end
 
-      def option(key, value)
+      def options(key, value)
         @getter_options[key] = value
+      end
+
+      def mode(mode)
+        @mode = mode
       end
     end
   end

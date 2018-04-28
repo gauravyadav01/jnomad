@@ -12,7 +12,7 @@ module Jnomad
       end
 
       def grace(grace)
-        @grace = grace
+        @grace = grace * 1000000000
       end
 
       def ignore_warnings(ignore_warnings)

@@ -7,12 +7,12 @@ module Jnomad
         @operand = nil
       end
 
-      def l_target(l_target)
-        @l_target = l_target
+      def attribute(attribute)
+        @l_target = attribute
       end
 
-      def r_target(r_target)
-        @r_target = r_target
+      def value(value)
+        @r_target = value
       end
 
       def operand(operator)

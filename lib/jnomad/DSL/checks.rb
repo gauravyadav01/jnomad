@@ -12,9 +12,10 @@ module Jnomad
         @path = nil
         @protocol = nil
         @t_l_s_skip_verify = nil
+        @initial_status = nil
         @port_label = nil
         @inteval = nil
-        @check_restart = nil
+        @check_restart = {}
       end
 
       def id(id)
@@ -53,12 +54,12 @@ module Jnomad
         @protocol = protocol
       end
 
-      def tls(tls)
-        @t_l_s_skip_verify = tls
+      def tls_skip_verify(tls_skip_verify)
+        @t_l_s_skip_verify = tls_skip_verify
       end
 
-      def port_label(port_label)
-        @port_label = port_label
+      def port(port)
+        @port_label = port
       end
 
       def interval(interval)

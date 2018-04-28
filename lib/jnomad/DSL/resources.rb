@@ -3,10 +3,11 @@ module Jnomad
     class Resources < Base
       def initialize
         @c_p_u = nil
-        @disk_m_b = nil
         @iops = nil
         @memory_m_b = nil
+        @disk_m_b = nil
         @networks = []
+        @m_bits = nil
       end
 
       def network(&block)
@@ -21,12 +22,12 @@ module Jnomad
         @c_p_u = cpu
       end
 
-      def memory(memory)
-        @memory_m_b = memory
-      end
-
       def iops(iops)
         @iops = iops
+      end
+
+      def memory(memory)
+        @memory_m_b = memory
       end
 
       def disk(disk)

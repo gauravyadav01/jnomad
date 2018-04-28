@@ -10,6 +10,7 @@ module Jnomad
         @type = "service"
         @priority = 50
         @region = "global"
+        @namespace = "default"
         @datacenters = []
         @update = {}
         @task_groups = []
@@ -46,6 +47,10 @@ module Jnomad
         @region = region
       end
 
+      def namespace(namespace)
+        @namespace = namespace
+      end
+
       def datacenters(*datacenters)
         @datacenters = datacenters
       end
@@ -58,7 +63,7 @@ module Jnomad
         @update = up
       end
 
-      def task_group(&block)
+      def group(&block)
         tg = TaskGroup.new
 
         tg.instance_eval &block

@@ -11,8 +11,8 @@ module Jnomad
         @migrate = migrate
       end
 
-      def size_m_b(size_m_b)
-        @size_m_b = size_m_b
+      def size(size)
+        @size_m_b = size
       end
 
       def sticky(sticky)
