@@ -7,12 +7,12 @@ module Jnomad
         @m_bits = nil
       end
 
-      def reserved_port(label, port)
-        @reserved_ports << {label: label, value: port}
-      end
-
-      def dynamic_port(label)
-        @dynamic_ports << {label: label}
+      def port(label, port = 0)
+        if port == 0
+          @dynamic_ports << {label: label}
+        else
+          @reserved_ports << {label: label, value: port}
+        end
       end
 
       def mbits(m_bits)

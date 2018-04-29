@@ -22,7 +22,7 @@ module Jnomad
       end
 
       def port(port)
-        @port_label = port_label
+        @port_label = port
       end
 
       def check(&block)
