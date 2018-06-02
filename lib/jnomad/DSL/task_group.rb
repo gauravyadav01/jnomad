@@ -2,13 +2,14 @@ module Jnomad
   module DSL
     class TaskGroup < Base
       def initialize
+        @tasks = []
         @constraints = []
         @count = 0
         @meta = {}
         @name = nil
         @restart_policy = nil
-        @tasks = []
         @ephemeral_disk = {}
+        @migrate = {}
       end
 
       def task(&block)
@@ -49,6 +50,10 @@ module Jnomad
       
       def ephemeral_dsik(key, value)
         @ephemeral_disk[key] = value
+      end
+
+      def migrate(key_value)
+        @migrate[key] = value
       end
 
     end

@@ -15,7 +15,7 @@ module Jnomad
         @r_target = value
       end
 
-      def operand(operator)
+      def operator(operator)
         @operand = operator
       end
     end
